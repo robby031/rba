@@ -1,6 +1,6 @@
-# rba — Risk-Based Authentication
+# rba - Risk-Based Authentication
 
-**rba** is a Go library for Risk-Based Authentication (RBA) designed as an inline decisioning layer — evaluating the context of a login or access request (device, IP, geolocation, behavioral history, action sensitivity) and determining whether the session should be allowed, require step-up authentication, or be blocked.
+**rba** is a Go library for Risk-Based Authentication (RBA) designed as an inline decisioning layer - evaluating the context of a login or access request (device, IP, geolocation, behavioral history, action sensitivity) and determining whether the session should be allowed, require step-up authentication, or be blocked.
 
 ## Architecture
 
@@ -18,9 +18,9 @@ Storage Adapters:
 ```
 rba/                     # Core types + Assessor orchestrator
 rba/signals/             # Signal collectors (IP, UA, device, geo)
-rba/feature/             # Feature builder (signal → feature)
-rba/risk/                # Risk engine (feature → score + level)
-rba/policy/              # Policy engine (assessment → decision)
+rba/feature/             # Feature builder (signal -> feature)
+rba/risk/                # Risk engine (feature -> score + level)
+rba/policy/              # Policy engine (assessment -> decision)
 rba/storage/             # Storage adapter interfaces
 rba/oidc/                # OIDC claims mapper + step-up helper
 rba/telemetry/           # Observability hooks & interfaces

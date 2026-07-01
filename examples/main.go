@@ -36,7 +36,7 @@ func main() {
 		risk.RiskThresholds{Medium: 30, High: 70},
 	)
 
-	// 4. Setup policy engine (tanpa bundle → default decision based on risk level)
+	// 4. Setup policy engine (tanpa bundle -> default decision based on risk level)
 	policyEngine := policy.NewRuleBasedEngine(nil)
 
 	// 5. Buat assessor
@@ -75,11 +75,11 @@ func main() {
 
 	switch decision.Action {
 	case rba.DecisionAllow:
-		fmt.Println("→ Allow: issue session/token")
+		fmt.Println("-> Allow: issue session/token")
 	case rba.DecisionChallenge:
-		fmt.Printf("→ Challenge: require %s step-up (min_acr=%s)\n",
+		fmt.Printf("-> Challenge: require %s step-up (min_acr=%s)\n",
 			decision.Challenge.Type, decision.Challenge.MinAcr)
 	case rba.DecisionDeny:
-		fmt.Printf("→ Deny: %s\n", decision.DenyReason)
+		fmt.Printf("-> Deny: %s\n", decision.DenyReason)
 	}
 }

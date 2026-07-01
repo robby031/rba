@@ -32,7 +32,7 @@ type PolicyEngine interface {
 }
 
 // Assessor adalah orchestrator utama yang mengoordinasikan alur RBA:
-// koleksi signal → pembangunan feature → kalkulasi risiko → keputusan policy.
+// koleksi signal -> pembangunan feature -> kalkulasi risiko -> keputusan policy.
 type Assessor struct {
 	collectors     []SignalCollector
 	featureBuilder FeatureBuilder

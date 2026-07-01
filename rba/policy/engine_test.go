@@ -126,13 +126,13 @@ func TestRuleBasedEngine_SetBundle(t *testing.T) {
 	e := NewRuleBasedEngine(nil)
 	a := rba.Assessment{Score: 0, Level: rba.RiskLow}
 
-	// Tanpa bundle → allow
+	// Tanpa bundle -> allow
 	dec, _ := e.Decide(context.Background(), rba.AssessmentInput{}, a)
 	if dec.Action != rba.DecisionAllow {
 		t.Fatalf("expected allow without bundle, got %s", dec.Action)
 	}
 
-	// Set bundle → deny high risk
+	// Set bundle -> deny high risk
 	e.SetPolicyBundle(&rba.PolicyBundle{
 		Version: "v2",
 		Rules: []rba.PolicyRule{
