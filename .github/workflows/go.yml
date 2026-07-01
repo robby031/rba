@@ -46,8 +46,8 @@ jobs:
       - name: Test
         run: go test -v -count=1 ./...
 
-  race:
-    name: Race Detector
+  benchmark:
+    name: Benchmark
     runs-on: ubuntu-latest
 
     steps:
